@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
 * Студент: [Szabolcs Gönczy](https://up.htmlacademy.ru/react/9/user/771177).
-* Наставник: `Неизвестно`.
+* Наставник: [Rail Sakhaviev](https://htmlacademy.ru/profile/id1331891).
 
 ---
 
