@@ -1,4 +1,4 @@
-function Room(): JSX.Element {
+function RoomScreen(): JSX.Element {
   return(
     <main className="page__main page__main--property">
       <section className="property">
@@ -325,4 +325,4 @@ function Room(): JSX.Element {
   );
 }
 
-export default Room;
+export default RoomScreen;

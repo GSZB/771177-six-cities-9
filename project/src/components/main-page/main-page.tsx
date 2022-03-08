@@ -1,4 +1,4 @@
-import CardComponent from '../card-screen/card-screen';
+import CardComponent from '../card-screen/card-component';
 
 type MainPageProps = {
   offersCount: number;

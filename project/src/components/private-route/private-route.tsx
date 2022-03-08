@@ -13,7 +13,7 @@ function PrivateRoute(props: PrivatRouteProps): JSX.Element {
   return (
     authorizationStatus === AuthorizationStatus.Auth
       ? children
-      : <Navigate to={AppRoute.SignIn} />
+      : <Navigate to={AppRoute.SignInScreen} />
   );
 }
 
