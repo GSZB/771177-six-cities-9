@@ -1,10 +1,10 @@
-import CardComponent from '../card-component.tsx/card-component';
+import CardComponent from '../card-screen/card-component';
 
 type MainPageProps = {
   offersCount: number;
 }
 
-function MainPageComponent({offersCount}: MainPageProps): JSX.Element {
+function MainPage({offersCount}: MainPageProps): JSX.Element {
   return (
     <main className="page__main page__main--index">
       <h1 className="visually-hidden">Cities</h1>
@@ -80,4 +80,4 @@ function MainPageComponent({offersCount}: MainPageProps): JSX.Element {
     </main>
   );}
 
-export default MainPageComponent;
+export default MainPage;
