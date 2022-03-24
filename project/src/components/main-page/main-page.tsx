@@ -1,10 +1,12 @@
-import CardComponent from '../card-screen/card-component';
+import CardList from '../card-screen/card-list';
+import { OfferCard } from '../../types/offer-types';
 
 type MainPageProps = {
   offersCount: number;
+  offers: OfferCard;
 }
 
-function MainPage({offersCount}: MainPageProps): JSX.Element {
+function MainPage({offersCount, offers}: MainPageProps): JSX.Element {
   return (
     <main className="page__main page__main--index">
       <h1 className="visually-hidden">Cities</h1>
@@ -65,11 +67,7 @@ function MainPage({offersCount}: MainPageProps): JSX.Element {
               </ul>
             </form>
             <div className="cities__places-list places__list tabs__content">
-              <CardComponent/>
-              <CardComponent/>
-              <CardComponent/>
-              <CardComponent/>
-              <CardComponent/>
+              <CardList offers={offers}/>
             </div>
           </section>
           <div className="cities__right-section">
