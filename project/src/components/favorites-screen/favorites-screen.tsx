@@ -1,13 +1,13 @@
-import { OfferCard } from '../../types/offer-types';
+import { Offer } from '../../types/offer-types';
 import { Link } from 'react-router-dom';
 
 type OfferCardProps = {
-  offers: OfferCard;
+  offers: Offer;
 }
 
 function FavoritesScreen(props: OfferCardProps): JSX.Element {
   const {offers} = props;
-  const {price, rating, title, apartmentType, isPremium, picture} = offers;
+  const {price, rating, title, type, isPremium, previewImage} = offers;
 
   return(
     <main className="page__main page__main--favorites">
@@ -30,7 +30,7 @@ function FavoritesScreen(props: OfferCardProps): JSX.Element {
                   </div>
                   <div className="favorites__image-wrapper place-card__image-wrapper">
                     <a href="#">
-                      <img className="place-card__image" src={picture} width="150" height="110" alt="Place image"/>
+                      <img className="place-card__image" src={previewImage} width="150" height="110" alt="Place image"/>
                     </a>
                   </div>
                   <div className="favorites__card-info place-card__info">
@@ -59,7 +59,7 @@ function FavoritesScreen(props: OfferCardProps): JSX.Element {
                     <h2 className="place-card__name">
                       <Link to="/offer/:id">{title}</Link>
                     </h2>
-                    <p className="place-card__type">{apartmentType}</p>
+                    <p className="place-card__type">{type}</p>
                   </div>
                 </article>
 
@@ -81,7 +81,7 @@ function FavoritesScreen(props: OfferCardProps): JSX.Element {
                   </div>
                   <div className="favorites__image-wrapper place-card__image-wrapper">
                     <a href="#">
-                      <img className="place-card__image" src={picture} width="150" height="110" alt="Place image"/>
+                      <img className="place-card__image" src={previewImage} width="150" height="110" alt="Place image"/>
                     </a>
                   </div>
                   <div className="favorites__card-info place-card__info">
@@ -110,7 +110,7 @@ function FavoritesScreen(props: OfferCardProps): JSX.Element {
                     <h2 className="place-card__name">
                       <Link to="/offer/:id">{title}</Link>
                     </h2>
-                    <p className="place-card__type">{apartmentType}</p>
+                    <p className="place-card__type">{type}</p>
                   </div>
                 </article>
               </div>

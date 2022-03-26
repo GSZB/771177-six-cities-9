@@ -6,12 +6,12 @@ import FavoritesScreen from '../favorites-screen/favorites-screen';
 import RoomScreen from '../room-screen/room-screen';
 import NotFoundScreen from '../not-found-screen/not-found-screen';
 import PrivateRoute from '../private-route/private-route';
-import { OfferCard } from '../../types/offer-types';
+import { Offers } from '../../types/offer-types';
 
 
 type AppProps = {
   offersCount: number;
-  offers: OfferCard;
+  offers: Offers;
 }
 
 function App({offersCount, offers}: AppProps): JSX.Element {

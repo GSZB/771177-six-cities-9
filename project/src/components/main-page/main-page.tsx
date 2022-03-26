@@ -1,9 +1,9 @@
 import CardList from '../card-screen/card-list';
-import { OfferCard } from '../../types/offer-types';
+import { Offer } from '../../types/offer-types';
 
 type MainPageProps = {
   offersCount: number;
-  offers: OfferCard;
+  offers: Offer;
 }
 
 function MainPage({offersCount, offers}: MainPageProps): JSX.Element {

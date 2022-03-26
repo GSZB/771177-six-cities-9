@@ -1,8 +1,8 @@
 import CardComponent from './card-component';
-import { OfferCard } from '../../types/offer-types';
+import { Offer } from '../../types/offer-types';
 
 type CardListProps = {
-  offers: OfferCard;
+  offers: Offer;
 }
 
 
