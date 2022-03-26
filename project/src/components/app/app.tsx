@@ -1,10 +1,10 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import { AppRoute, AuthorizationStatus } from '../../const';
-import MainPage from '../main-page/main-page';
-import SignInScreen from '../sign-in-screen/sign-in-screen';
-import FavoritesScreen from '../favorites-screen/favorites-screen';
-import RoomScreen from '../room-screen/room-screen';
-import NotFoundScreen from '../not-found-screen/not-found-screen';
+import MainPage from '../../pages/main-page/main-page';
+import SignInScreen from '../../pages/sign-in-screen/sign-in-screen';
+import FavoritesScreen from '../../pages/favorites-screen/favorites-screen';
+import RoomScreen from '../../pages/room-screen/room-screen';
+import NotFoundScreen from '../../pages/not-found-screen/not-found-screen';
 import PrivateRoute from '../private-route/private-route';
 import { Offers } from '../../types/offer-types';
 
