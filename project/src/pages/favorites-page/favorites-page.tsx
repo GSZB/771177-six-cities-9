@@ -2,12 +2,12 @@ import { Offer } from '../../types/offer-types';
 import { Link } from 'react-router-dom';
 
 type OfferCardProps = {
-  offers: Offer;
+  offer: Offer;
 }
 
 function FavoritesScreen(props: OfferCardProps): JSX.Element {
-  const {offers} = props;
-  const {price, rating, title, type, isPremium, previewImage} = offers;
+  const {offer} = props;
+  const {price, rating, title, type, isPremium, previewImage} = offer;
 
   return(
     <main className="page__main page__main--favorites">

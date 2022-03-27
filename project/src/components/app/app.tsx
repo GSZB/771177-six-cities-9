@@ -11,7 +11,7 @@ import { Offer } from '../../types/offer-types';
 
 type AppProps = {
   offersCount: number;
-  offers: Offer;
+  offers: Offer[];
 }
 
 function App({offersCount, offers}: AppProps): JSX.Element {
@@ -20,7 +20,7 @@ function App({offersCount, offers}: AppProps): JSX.Element {
       <Routes>
         <Route index element={<MainPage offersCount={offersCount} offers={offers} />}/>
         <Route path={AppRoute.SignInScreen} element={<SignInScreen/>}/>
-        <Route path={AppRoute.FavoritesScreen} element={<PrivateRoute authorizationStatus={AuthorizationStatus.Auth}><FavoritesScreen offers={offers}/></PrivateRoute>}/>
+        <Route path={AppRoute.FavoritesScreen} element={<PrivateRoute authorizationStatus={AuthorizationStatus.Auth}><FavoritesScreen offer={offers[0]}/></PrivateRoute>}/>
         <Route path={AppRoute.RoomScreen} element={<RoomScreen/>}/>
         <Route path='*' element={<NotFoundScreen/>}/>
       </Routes>

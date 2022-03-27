@@ -2,19 +2,30 @@ import { Offer } from '../../types/offer-types';
 import { Link } from 'react-router-dom';
 
 type OfferCardProps = {
-  offers: Offer;
+  offer: Offer;
+  setActiveOffer: (id: number | undefined) => void;
 }
 
 
-function CardComponent(props: OfferCardProps): JSX.Element {
-  const {offers} = props;
-  const {previewImage, title, type, price, rating, isPremium} = offers;
+function OfferCard(props: OfferCardProps): JSX.Element {
+  const {offer, setActiveOffer} = props;
+  const {previewImage, title, type, price, rating, isPremium} = offer;
+
+  const handleFocus = () => {
+    setActiveOffer(offer.id);
+  };
+
+  const handleBlur = () => {
+    setActiveOffer(undefined);
+  };
 
   return (
-    <article className="cities__place-card place-card">
-      <div className={isPremium ? 'place-card__mark' : ''}>
-        <span>Premium</span>
-      </div>
+    <article className="cities__place-card place-card" onFocus={handleFocus} onBlur={handleBlur}>
+      {isPremium && (
+        <div className="place-card__mark">
+          <span>Premium</span>
+        </div>
+      )}
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
           <img className="place-card__image" src={previewImage} width="260" height="200" alt="Place image" />
@@ -52,4 +63,4 @@ function CardComponent(props: OfferCardProps): JSX.Element {
   );
 }
 
-export default CardComponent;
+export default OfferCard;
