@@ -1,4 +1,4 @@
-import CommentComponent from '../room-screen/comment-form/comment-form';
+import CommentComponent from '../../components/comment-form/comment-form';
 
 function RoomScreen(): JSX.Element {
   return(

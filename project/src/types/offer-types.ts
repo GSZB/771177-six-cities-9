@@ -35,4 +35,3 @@ export type Offer = {
   id: number,
 }
 
-export type Offers = Offer[];

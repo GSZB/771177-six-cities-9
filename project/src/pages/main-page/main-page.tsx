@@ -1,4 +1,4 @@
-import CardList from '../card-screen/card-list';
+import CardList from '../../components/card-component/card-list';
 import { Offer } from '../../types/offer-types';
 
 type MainPageProps = {
