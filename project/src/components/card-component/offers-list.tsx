@@ -8,7 +8,7 @@ type CardListProps = {
 
 
 function OffersList({offer}: CardListProps): JSX.Element {
-  const [, setActiveOffer] = useState<number | undefined>(undefined);
+  const [, setActiveOffer] = useState<number | undefined>();
 
   const offers = [];
   for(let i = 0; i < 4; i++) {

@@ -13,6 +13,8 @@ function OfferCard(props: OfferCardProps): JSX.Element {
 
   const handleFocus = () => {
     setActiveOffer(offer.id);
+    // eslint-disable-next-line no-console
+    console.log('lox');
   };
 
   const handleBlur = () => {
