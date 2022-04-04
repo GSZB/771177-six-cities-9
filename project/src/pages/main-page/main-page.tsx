@@ -1,14 +1,15 @@
 import OffersList from '../../components/card-component/offers-list';
-import { Offer, City, Location } from '../../types/offer-types';
+import { Offer } from '../../types/offer-types';
 import Map from '../../components/map/map';
+import List from '../../components/list/list';
 
 
 type MainPageProps = {
   offersCount: number;
   offers: Offer[];
-  city: City;
-  points: Location[],
-  selectedPoint: City | undefined;
+  city: Offer['city'];
+  points: Offer['location'][],
+  selectedPoint: Offer['city'] | undefined;
 }
 
 function MainPage({offersCount, offers, city, points, selectedPoint}: MainPageProps): JSX.Element {
@@ -77,6 +78,7 @@ function MainPage({offersCount, offers, city, points, selectedPoint}: MainPagePr
           </section>
           <div className="cities__right-section">
             <section className="cities__map map">
+              <List points={points} onListItemHover={onListItemHover} />
               <Map city={city} points={points} selectedPoint={selectedPoint}/>
             </section>
           </div>
