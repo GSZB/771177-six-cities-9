@@ -12,6 +12,7 @@ ReactDOM.render(
     <App
       offersCount={Setting.OFFERS_COUNT}
       offers={offers}
+      city={offers[0].city}
     />
   </React.StrictMode>,
   document.getElementById('root'));

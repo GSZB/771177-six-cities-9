@@ -1,12 +1,17 @@
 import OffersList from '../../components/card-component/offers-list';
-import { Offer } from '../../types/offer-types';
+import { Offer, City, Location } from '../../types/offer-types';
+import Map from '../../components/map/map';
+
 
 type MainPageProps = {
   offersCount: number;
   offers: Offer[];
+  city: City;
+  points: Location[],
+  selectedPoint: City | undefined;
 }
 
-function MainPage({offersCount, offers}: MainPageProps): JSX.Element {
+function MainPage({offersCount, offers, city, points, selectedPoint}: MainPageProps): JSX.Element {
   return (
     <main className="page__main page__main--index">
       <h1 className="visually-hidden">Cities</h1>
@@ -71,7 +76,9 @@ function MainPage({offersCount, offers}: MainPageProps): JSX.Element {
             </div>
           </section>
           <div className="cities__right-section">
-            <section className="cities__map map"></section>
+            <section className="cities__map map">
+              <Map city={city} points={points} selectedPoint={selectedPoint}/>
+            </section>
           </div>
         </div>
       </div>
