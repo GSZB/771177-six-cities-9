@@ -1,30 +1,22 @@
-import {MouseEvent} from 'react';
 import {Offer} from '../../types/offer-types';
 
 type ListProps = {
-  points: Offer[];
-  onListItemHover: (listItemName: string) => void;
+  centers: Offer[];
 };
 
 function List(props: ListProps): JSX.Element {
-  const {points, onListItemHover} = props;
-
-  const listItemHoverHandler = (event: MouseEvent<HTMLLIElement>) => {
-    event.preventDefault();
-    onListItemHover(event.currentTarget.innerText);
-  };
+  const {centers} = props;
 
   return (
     <ul className="list">
-      {points.map((point, index) => {
-        const keyValue = point.id;
+      {centers.map((center, index) => {
+        const keyValue = center.id;
         return (
           <li
             className="list__item"
             key={keyValue}
-            onMouseEnter={listItemHoverHandler}
           >
-            {point.title}
+            {center.id}
           </li>
         );
       })}

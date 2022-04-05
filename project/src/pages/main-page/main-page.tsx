@@ -13,6 +13,7 @@ type MainPageProps = {
 }
 
 function MainPage({offersCount, offers, city, points, selectedPoint}: MainPageProps): JSX.Element {
+
   return (
     <main className="page__main page__main--index">
       <h1 className="visually-hidden">Cities</h1>
@@ -78,7 +79,7 @@ function MainPage({offersCount, offers, city, points, selectedPoint}: MainPagePr
           </section>
           <div className="cities__right-section">
             <section className="cities__map map">
-              <List points={points} onListItemHover={onListItemHover} />
+              <List centers={offers} />
               <Map city={city} points={points} selectedPoint={selectedPoint}/>
             </section>
           </div>
